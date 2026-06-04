@@ -1,0 +1,28 @@
+import game.*
+
+describe "Piedra Papel o Tijera" {
+
+    test " piedra le gana a tijera " {
+        assert.that(piedra.leGanaA(tijera))
+    }
+
+    test " piedra no le gana a papel " {
+        assert.notThat(piedra.leGanaA(papel))
+    }
+
+    test " papel le gana a piedra " {
+        assert.that(papel.leGanaA(piedra))
+    }
+
+    test " papel no le gana a tijera " {
+        assert.notThat(papel.leGanaA(tijera))
+    }
+
+    test " tijera le gana a papel " {
+        assert.that(tijera.leGanaA(papel))
+    }
+
+    test " tijera no le gana a piedra " {
+        assert.notThat(tijera.leGanaA(piedra))
+    }
+}

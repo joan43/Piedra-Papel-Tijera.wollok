@@ -1,4 +1,9 @@
 import wollok.game.*
+import game.piedra
+import game.papel
+import game.tijera
+import game.humano
+import game.computadora
 
 // method image() = "link image"
 // method position = game.at(x,y) 
@@ -7,7 +12,7 @@ import wollok.game.*
 program PiedraPapelTijera {
 	game.title("Piedra, Papel o Tijera")
 	game.height(12)
-	game.width(15)
+	game.width(34)
 
     game.addVisual(piedra)
     game.addVisual(papel)

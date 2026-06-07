@@ -1666,3 +1666,21 @@
 {"level":"info","message":"⌛ Validating game.wlk","timeElapsed":346,"timestamp":"2026-06-05T13:55:37.804Z"}
 {"level":"info","message":"⌛ Validating tests.wtest","timeElapsed":248,"timestamp":"2026-06-05T13:55:38.054Z"}
 {"level":"info","message":"⌛ Validating mainExample.wpgm","timeElapsed":153,"timestamp":"2026-06-05T13:55:38.208Z"}
+{"exitCode":"SIGINT","level":"info","message":"👾 Game executed mainExample.PiedraPapelTijera on c:\\Users\\Estudiante\\Desktop\\Piedra-Papel-Tijera.wollok","timeElapsed":635343,"timestamp":"2026-06-05T14:04:37.958Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":886,"timestamp":"2026-06-07T01:45:41.167Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":750,"timestamp":"2026-06-07T01:45:41.925Z"}
+{"level":"info","message":"⌛ Validating tests.wtest","timeElapsed":710,"timestamp":"2026-06-07T01:45:49.295Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":391,"timestamp":"2026-06-07T01:45:49.688Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":750,"timestamp":"2026-06-07T01:45:50.533Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":260,"timestamp":"2026-06-07T01:45:50.795Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":354,"timestamp":"2026-06-07T01:45:51.668Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":289,"timestamp":"2026-06-07T01:45:51.958Z"}
+{"level":"info","message":"⌛ Validating tests.wtest","timeElapsed":409,"timestamp":"2026-06-07T01:45:52.370Z"}
+{"level":"info","message":"⌛ Validating mainExample.wpgm","timeElapsed":407,"timestamp":"2026-06-07T01:45:52.778Z"}
+{"level":"info","message":"⌛ Validating game.wlk","timeElapsed":472,"timestamp":"2026-06-07T01:45:53.251Z"}
+{"level":"info","message":"⌛ Validating tests.wtest","timeElapsed":365,"timestamp":"2026-06-07T01:45:53.616Z"}
+{"level":"info","message":"⌛ Validating mainExample.wpgm","timeElapsed":195,"timestamp":"2026-06-07T01:45:53.812Z"}
+{"level":"info","message":"⌛ Validating game.wlk","timeElapsed":410,"timestamp":"2026-06-07T01:45:54.224Z"}
+{"level":"info","message":"⌛ Validating tests.wtest","timeElapsed":345,"timestamp":"2026-06-07T01:45:54.575Z"}
+{"level":"info","message":"⌛ Validating mainExample.wpgm","timeElapsed":223,"timestamp":"2026-06-07T01:45:54.799Z"}
+{"level":"info","message":"⌛ Validating game.wlk","timeElapsed":469,"timestamp":"2026-06-07T01:45:55.269Z"}

@@ -7,7 +7,6 @@ import game.computadora
 import game.cursor
 import game.cartelResultado
 import game.juego
-import game.jugadaPc
 
 // method image() = "link image"
 // method position = game.at(x,y)
@@ -25,7 +24,6 @@ program PiedraPapelTijera {
 	game.addVisual(computadora)
 	game.addVisual(cursor)
 	game.addVisual(cartelResultado)
-    game.addVisual(jugadaPc)
 
 	// capturamos la flecha izquierda
 	keyboard.left().onPressDo {
@@ -39,10 +37,8 @@ program PiedraPapelTijera {
 
 	// capturamos ENTER para jugar
 	keyboard.enter().onPressDo {
-        if (juego.puedeJugar()) {
-        juego.jugar(juego.opcionSeleccionada())
-        }
-    }
+		juego.jugar(juego.opcionSeleccionada())
+	}
 
     // cada 5 segundos revisa si hay que reiniciar
     const tickReinicio = game.tick(5000, {

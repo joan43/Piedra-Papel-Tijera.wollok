@@ -435,3 +435,5 @@
 {"level":"info","message":"⌛ Validating assets/mainExample.wpgm","timeElapsed":347,"timestamp":"2026-06-15T20:09:38.115Z"}
 {"level":"info","message":"🚀 Program executed \u001b[3m\u001b[34mmainExample.PiedraPapelTijera\u001b[39m\u001b[23m on \u001b[3m\u001b[34mc:\\Users\\Estudiante\\Desktop\\Piedra-Papel-Tijera.wollok\u001b[39m\u001b[23m","ok":true,"timeElapsed":958,"timestamp":"2026-06-15T20:11:52.376Z"}
 {"exitCode":"SIGINT","level":"info","message":"👾 Game executed mainExample.PiedraPapelTijera on c:\\Users\\Estudiante\\Desktop\\Piedra-Papel-Tijera.wollok","timeElapsed":249698,"timestamp":"2026-06-15T20:16:01.116Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":252,"timestamp":"2026-06-15T20:16:16.207Z"}
+{"level":"info","message":"⌛ Validating game.wlk","timeElapsed":527,"timestamp":"2026-06-15T20:16:16.804Z"}

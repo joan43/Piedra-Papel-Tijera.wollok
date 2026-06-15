@@ -2,6 +2,16 @@ import wollok.game.*
 
 // podemos definir objetos...
 
+object aclaracion {
+    method image() = "aclaracion.png"
+    method position() = game.at(0,4)
+}
+
+object dude{
+    method image() = "dude.png"
+    method position() = game.at(14,8)
+}
+
 object piedra {
     method image() = "piedra_preview.png"
     method position() = game.at(11,3)
@@ -39,7 +49,12 @@ object humano{
 
 object computadora{
 	method image() = "compu_preview.png"
-	method position() = game.at(13,10)
+	method position() = game.at(14,10) // cre
+}
+
+object btnreiniciar {
+    method image() = "Re.png"
+    method position() = game.at(1, 6)
 }
 
 // cursor arriba de la opcion elegida
@@ -97,7 +112,7 @@ object juego {
 	var property seleccion = 1
 	var property resultado = ""
 	var property mostrarResultado = false
-    var property jugadaComputadora = piedra
+    var property jugadaComputadora = dude
     var property puedeJugar = true
     
 	method moverIzquierda() {
@@ -132,10 +147,11 @@ object juego {
         resultado = "empate"
         mostrarResultado = true
 
-        game.schedule(3000, {
-        console.println("REINICIANDO")
-        juego.reiniciar()
-        })
+        keyboard.r().onPressDo {
+            if (!juego.puedeJugar()) {
+                juego.reiniciar()
+            }
+        }
 
         return "Empate"
         }
@@ -144,10 +160,11 @@ object juego {
         resultado = "ganaste"
         mostrarResultado = true
 
-        game.schedule(3000, {
-        console.println("REINICIANDO")
-         juego.reiniciar()
-        })
+        keyboard.r().onPressDo {
+            if (!juego.puedeJugar()) {
+                juego.reiniciar()
+            }
+        }
 
         return "Ganaste"
     }
@@ -155,10 +172,11 @@ object juego {
     resultado = "perdiste"
     mostrarResultado = true
 
-    game.schedule(3000, {
-    console.println("REINICIANDO")
-    juego.reiniciar()
-    })
+    keyboard.r().onPressDo {
+        if (!juego.puedeJugar()) {
+            juego.reiniciar()
+        }
+    }
 
     return "Perdiste"
     }
@@ -168,8 +186,10 @@ object juego {
 
     console.println("ENTRO A REINICIAR")
 
-    mostrarResultado = false
+    jugadaComputadora = dude
 
+    mostrarResultado = false
+    
     resultado = ""
 
     seleccion = 1 // vuelve a papel
@@ -190,9 +210,13 @@ object jugadaPc {
         if (juego.jugadaComputadora() == papel) {
             return "papel_pc.png"
         }
+        
+        if (juego.jugadaComputadora() == tijera) {
+            return "tijera_pc.png"
+        }
 
-        return "tijera_pc.png"
+        return "dude.png"
     }
 
-    method position() = game.at(13,8)
+    method position() = game.at(14,8)
 }

@@ -5,9 +5,9 @@
 #### **Este es un juego de piedra papel o tijera  hecho en  wollok / wollok game**
 #### **Donde seleccionas cualquiera de las tres opciones: [piedra] [papel] [tijera]**
 #### **y la PC elegira aleatoriamente tambien una de las 3 opciones.**
-#### **Se compara quien gana, y aparece en medio de la pantalla si ganaste o perdiste**
+#### **Se compara quien gana, y aparece en medio de la pantalla si ganaste o perdiste o empataste**
 |
-#### se puede reiniciar con el boton [R]
+#### se puede reiniciar con la tecla [r]
 
 ---
 
@@ -61,8 +61,8 @@ Piedra-Papel-Tijera/
 
 -  🚀 Futuras mejoras
 
-* 
-* 
+* mejor interfaz y animaciones
+* niveles de dificultad
 * 
 
 °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°

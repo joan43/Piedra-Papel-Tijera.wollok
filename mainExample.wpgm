@@ -11,11 +11,7 @@ import game.jugadaPc
 import game.btnreiniciar
 import game.aclaracion
 
-// method image() = "link image"
-// method position = game.at(x,y)
-
 program PiedraPapelTijera {
-
 	game.title("Piedra, Papel o Tijera")
 	game.height(12)
 	game.width(34)
@@ -50,15 +46,11 @@ program PiedraPapelTijera {
     }
 
     // presionar R para reiniciar
-    
 	keyboard.r().onPressDo {
         if (!juego.puedeJugar()) {
             juego.reiniciar()
         }
     }
-
-   
-
 
 	game.start()
 }

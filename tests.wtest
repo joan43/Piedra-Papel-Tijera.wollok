@@ -1,30 +1,154 @@
-//import game.*
+import game.*
+import mainExample.*
 
-// falta crear los correspondientes tests . . . .
 
-// describe "Piedra Papel o Tijera" {
 
-  //  test " piedra le gana a tijera " {
-  //      assert.that(piedra.leGanaA(tijera))
-  //  }
+ describe "  probar todas las jugadas posibles  "{
 
-  //  test " piedra no le gana a papel " {
-  //      assert.notThat(piedra.leGanaA(papel))
- //   }
+  test " piedra contra piedra resulta en empate " {
+    juego.jugadaComputadora("piedra")
 
-  //  test " papel le gana a piedra " {
-  //      assert.that(papel.leGanaA(piedra))
-  //  }
+    assert.equals("empate", juego.jugar("piedra"))
+  }
 
-  //  test " papel no le gana a tijera " {
-  //      assert.notThat(papel.leGanaA(tijera))
-   // }
+  test " piedra contra papel resulta en derrota " {
+    juego.jugadaComputadora("papel")
 
-   // test " tijera le gana a papel " {
-   //     assert.that(tijera.leGanaA(papel))
-   // }
+    assert.equals("perdiste", juego.jugar("piedra"))
+  }
 
-  //  test " tijera no le gana a piedra " {
-   //     assert.notThat(tijera.leGanaA(piedra))
-   // }
-//}
+  test " piedra contra tijera resulta en victoria " {
+    juego.jugadaComputadora("tijera")
+
+    assert.equals("ganaste", juego.jugar("piedra"))
+  }
+
+  test " papel contra piedra resulta en victoria " {
+    juego.jugadaComputadora("piedra")
+
+    assert.equals("ganaste", juego.jugar("papel"))
+  }
+
+  test " papel contra papel resulta en empate " {
+    juego.jugadaComputadora("papel")
+
+    assert.equals("empate", juego.jugar("papel"))
+  }
+
+  test " papel contra tijera resulta en derrota " {
+    juego.jugadaComputadora("tijera")
+
+    assert.equals("perdiste", juego.jugar("papel"))
+  }
+
+  test " tijera contra piedra resulta en derrota " {
+    juego.jugadaComputadora("piedra")
+
+    assert.equals("perdiste", juego.jugar("tijera"))
+  }
+
+  test " tijera contra papel resulta en victoria " {
+    juego.jugadaComputadora("papel")
+
+    assert.equals("ganaste", juego.jugar("tijera"))
+  }
+
+  test " tijera contra tijera resulta en empate " {
+    juego.jugadaComputadora("tijera")
+
+    assert.equals("empate", juego.jugar("tijera"))
+  }
+
+ }
+
+
+
+
+ describe " Funciona el metodo que define quien gana en cada objeto" {
+
+  test " piedra le gana a tijera " {
+      assert.that(piedra.leGanaA(tijera))
+    }
+
+   test " piedra no le gana a papel " {
+      assert.notThat(piedra.leGanaA(papel))
+   }
+
+  test " papel le gana a piedra " {
+       assert.that(papel.leGanaA(piedra))
+  }
+
+  test " papel no le gana a tijera " {
+       assert.notThat(papel.leGanaA(tijera))
+   }
+
+   test " tijera le gana a papel " {
+     assert.that(tijera.leGanaA(papel))
+    }
+
+  test " tijera no le gana a piedra " {
+       assert.notThat(tijera.leGanaA(piedra))
+   }
+
+}
+
+
+
+
+describe " probar que se reinicia correctamente "{
+   
+}
+
+
+describe "posicionamiento correcto del cartelResultado"{
+   test "- "{
+      //assert.equals(game.at(13, 6), cartelResultado.position())
+   }
+}
+
+
+/*
+
+describe " las posiciones de todos los elementos son correctas"{
+
+  test " piedra "{
+    
+  }
+
+  test " papel "{
+
+  } 
+
+  test " tijera "{
+
+  }
+
+  test "aclaracion"{
+
+  }
+
+  test "dude"{
+
+  }
+
+  test " humano "{
+     
+  }
+
+  test " computadora "{
+
+  }
+
+  test " cursor "{
+
+  }
+
+
+
+  test " imagen R "{
+
+  }
+
+}
+
+*/

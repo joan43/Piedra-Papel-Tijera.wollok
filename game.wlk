@@ -133,6 +133,7 @@ object juego {
     
     
 	method jugar(jugadaJugador) {
+        
         if (!puedeJugar) {
             return
         }
@@ -144,57 +145,57 @@ object juego {
 
         if (jugadaJugador == jugadaComputadora) {
 
-        resultado = "empate"
-        mostrarResultado = true
+           resultado = "empate"
+           mostrarResultado = true
 
-        keyboard.r().onPressDo {
-            if (!juego.puedeJugar()) {
+           keyboard.r().onPressDo {
+              if (!juego.puedeJugar()) {
                 juego.reiniciar()
+              }
+           }
+
+           return "Empate"
+        }
+
+        if (jugadaJugador.leGanaA(jugadaComputadora)) {
+           resultado = "ganaste"
+           mostrarResultado = true
+
+            keyboard.r().onPressDo {
+               if (!juego.puedeJugar()) {
+                 juego.reiniciar()
+               }
             }
+
+            return "Ganaste"
         }
 
-        return "Empate"
-        }
+      resultado = "perdiste"
+      mostrarResultado = true
 
-    if (jugadaJugador.leGanaA(jugadaComputadora)) {
-        resultado = "ganaste"
-        mostrarResultado = true
-
-        keyboard.r().onPressDo {
-            if (!juego.puedeJugar()) {
-                juego.reiniciar()
-            }
-        }
-
-        return "Ganaste"
-    }
-
-    resultado = "perdiste"
-    mostrarResultado = true
-
-    keyboard.r().onPressDo {
+      keyboard.r().onPressDo {
         if (!juego.puedeJugar()) {
             juego.reiniciar()
         }
-    }
+      }
 
-    return "Perdiste"
+      return "Perdiste"
     }
     
     // reinicia el tablero
     method reiniciar() {
 
-    console.println("ENTRO A REINICIAR")
+       console.println("ENTRO A REINICIAR")
 
-    jugadaComputadora = dude
+       jugadaComputadora = dude
 
-    mostrarResultado = false
+       mostrarResultado = false
     
-    resultado = ""
+       resultado = ""
 
-    seleccion = 1 // vuelve a papel
+       seleccion = 1 // vuelve a papel
 
-    puedeJugar = true
+       puedeJugar = true
     }
 }
 

@@ -136,30 +136,19 @@ object juego {
   
   method jugar(jugadaJugador) {
     if (!puedeJugar) {
-      return
+      aclaracion.error("No se puede jugar, debe reiniciar")
     }
-    
-    puedeJugar = false
     
     if (jugadaJugador == jugadaComputadora) {
       resultado = "empate"
-      mostrarResultado = true
-      
-      return "Empate"
-    }
-    
-    if (jugadaJugador.leGanaA(jugadaComputadora)) {
+    } else if (jugadaJugador.leGanaA(jugadaComputadora)) {
       resultado = "ganaste"
-      mostrarResultado = true
-      
-      return "Ganaste"
+    } else {
+      resultado = "perdiste"
     }
-    
-    resultado = "perdiste"
+
+    puedeJugar = false
     mostrarResultado = true
-    
-    
-    return "Perdiste"
   }
   
   // reinicia el tablero

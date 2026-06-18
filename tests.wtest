@@ -2,50 +2,58 @@ import juego.*
 import wollok.game.*
 
  describe "todas las jugadas posibles"{
-
   test "piedra contra piedra" {
     juego.jugadaComputadora(piedra)
-    assert.equals("Empate", juego.jugar(piedra))
+    juego.jugar(piedra)
+    assert.equals("empate", juego.resultado())
   }
 
   test "piedra contra papel resulta en derrota " {
     juego.jugadaComputadora(papel)
-    assert.equals("Perdiste", juego.jugar(piedra))
+    juego.jugar(piedra)
+    assert.equals("perdiste", juego.resultado())
   }
 
   test "piedra contra tijera resulta en victoria " {
     juego.jugadaComputadora(tijera)
-    assert.equals("Ganaste", juego.jugar(piedra))
+    juego.jugar(piedra)
+    assert.equals("ganaste", juego.resultado())
   }
 
   test "papel contra piedra resulta en victoria " {
     juego.jugadaComputadora(piedra)
-    assert.equals("Ganaste", juego.jugar(papel))
+    juego.jugar(papel)
+    assert.equals("ganaste", juego.resultado())
   }
 
   test "papel contra papel resulta en empate " {
     juego.jugadaComputadora(papel)
-    assert.equals("Empate", juego.jugar(papel))
+    juego.jugar(papel)
+    assert.equals("empate", juego.resultado())
   }
 
   test "papel contra tijera resulta en derrota " {
     juego.jugadaComputadora(tijera)
-    assert.equals("Perdiste", juego.jugar(papel))
+    juego.jugar(papel)
+    assert.equals("perdiste", juego.resultado())
   }
 
   test "tijera contra piedra resulta en derrota " {
     juego.jugadaComputadora(piedra)
-    assert.equals("Perdiste", juego.jugar(tijera))
+    juego.jugar(tijera)
+    assert.equals("perdiste", juego.resultado())
   }
 
   test "tijera contra papel resulta en victoria " {
     juego.jugadaComputadora(papel)
-    assert.equals("Ganaste", juego.jugar(tijera))
+    juego.jugar(tijera)
+    assert.equals("ganaste", juego.resultado())
   }
 
   test "tijera contra tijera resulta en empate " {
     juego.jugadaComputadora(tijera)
-    assert.equals("Empate", juego.jugar(tijera))
+    juego.jugar(tijera)
+    assert.equals("empate", juego.resultado())
   }
 
 }
@@ -105,7 +113,8 @@ describe "reinicia correctamente "{
   method initialize() {
     // Simulamos una jugada
     juego.jugadaComputadora(tijera)
-    juego.jugar(piedra)
+    juego.jugar(piedra
+    juego.resultado())
   }
 
   test "después de jugar el estado es el esperado" {

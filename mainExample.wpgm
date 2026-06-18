@@ -44,7 +44,8 @@ program PiedraPapelTijera {
 	// capturamos ENTER para jugar
 	keyboard.enter().onPressDo {
         if (juego.puedeJugar()) {
-        juego.jugar(juego.opcionSeleccionada())
+			juego.jugadaRandomDeComputadora()
+        	juego.jugar(juego.opcionSeleccionada())
         }
     }
 

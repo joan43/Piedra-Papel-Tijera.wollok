@@ -1,92 +1,78 @@
 import game.*
 import mainExample.*
 
+ describe "todas las jugadas posibles"{
 
-
- describe "  probar todas las jugadas posibles  "{
-
-  test " piedra contra piedra resulta en empate " {
-    juego.jugadaComputadora("piedra")
-
-    assert.equals("empate", juego.jugar("piedra"))
+  test "piedra contra piedra" {
+    juego.jugadaComputadora(piedra)
+    assert.equals("Empate", juego.jugar(piedra))
   }
 
-  test " piedra contra papel resulta en derrota " {
-    juego.jugadaComputadora("papel")
-
-    assert.equals("perdiste", juego.jugar("piedra"))
+  test "piedra contra papel resulta en derrota " {
+    juego.jugadaComputadora(papel)
+    assert.equals("Perdiste", juego.jugar(piedra))
   }
 
-  test " piedra contra tijera resulta en victoria " {
-    juego.jugadaComputadora("tijera")
-
-    assert.equals("ganaste", juego.jugar("piedra"))
+  test "piedra contra tijera resulta en victoria " {
+    juego.jugadaComputadora(tijera)
+    assert.equals("Ganaste", juego.jugar(piedra))
   }
 
-  test " papel contra piedra resulta en victoria " {
-    juego.jugadaComputadora("piedra")
-
-    assert.equals("ganaste", juego.jugar("papel"))
+  test "papel contra piedra resulta en victoria " {
+    juego.jugadaComputadora(piedra)
+    assert.equals("Ganaste", juego.jugar(papel))
   }
 
-  test " papel contra papel resulta en empate " {
-    juego.jugadaComputadora("papel")
-
-    assert.equals("empate", juego.jugar("papel"))
+  test "papel contra papel resulta en empate " {
+    juego.jugadaComputadora(papel)
+    assert.equals("Empate", juego.jugar(papel))
   }
 
-  test " papel contra tijera resulta en derrota " {
-    juego.jugadaComputadora("tijera")
-
-    assert.equals("perdiste", juego.jugar("papel"))
+  test "papel contra tijera resulta en derrota " {
+    juego.jugadaComputadora(tijera)
+    assert.equals("Perdiste", juego.jugar(papel))
   }
 
-  test " tijera contra piedra resulta en derrota " {
-    juego.jugadaComputadora("piedra")
-
-    assert.equals("perdiste", juego.jugar("tijera"))
+  test "tijera contra piedra resulta en derrota " {
+    juego.jugadaComputadora(piedra)
+    assert.equals("Perdiste", juego.jugar(tijera))
   }
 
-  test " tijera contra papel resulta en victoria " {
-    juego.jugadaComputadora("papel")
-
-    assert.equals("ganaste", juego.jugar("tijera"))
+  test "tijera contra papel resulta en victoria " {
+    juego.jugadaComputadora(papel)
+    assert.equals("Ganaste", juego.jugar(tijera))
   }
 
-  test " tijera contra tijera resulta en empate " {
-    juego.jugadaComputadora("tijera")
-
-    assert.equals("empate", juego.jugar("tijera"))
+  test "tijera contra tijera resulta en empate " {
+    juego.jugadaComputadora(tijera)
+    assert.equals("Empate", juego.jugar(tijera))
   }
 
- }
+}
 
+ describe "le gana a" {
 
-
-
- describe " Funciona el metodo que define quien gana en cada objeto" {
-
-  test " piedra le gana a tijera " {
+  test "piedra le gana a tijera " {
       assert.that(piedra.leGanaA(tijera))
     }
 
-   test " piedra no le gana a papel " {
+   test "piedra no le gana a papel " {
       assert.notThat(piedra.leGanaA(papel))
    }
 
-  test " papel le gana a piedra " {
+  test "papel le gana a piedra " {
        assert.that(papel.leGanaA(piedra))
   }
 
-  test " papel no le gana a tijera " {
+  test "papel no le gana a tijera " {
        assert.notThat(papel.leGanaA(tijera))
    }
 
-   test " tijera le gana a papel " {
+   test "tijera le gana a papel " {
      assert.that(tijera.leGanaA(papel))
     }
 
-  test " tijera no le gana a piedra " {
+  test "tijera no le gana a piedra " {
        assert.notThat(tijera.leGanaA(piedra))
    }
 
@@ -100,55 +86,8 @@ describe " probar que se reinicia correctamente "{
 }
 
 
-describe "posicionamiento correcto del cartelResultado"{
+describe "El cartel resultado se muestra correctamente"{
    test "- "{
       //assert.equals(game.at(13, 6), cartelResultado.position())
    }
 }
-
-
-/*
-
-describe " las posiciones de todos los elementos son correctas"{
-
-  test " piedra "{
-    
-  }
-
-  test " papel "{
-
-  } 
-
-  test " tijera "{
-
-  }
-
-  test "aclaracion"{
-
-  }
-
-  test "dude"{
-
-  }
-
-  test " humano "{
-     
-  }
-
-  test " computadora "{
-
-  }
-
-  test " cursor "{
-
-  }
-
-
-
-  test " imagen R "{
-
-  }
-
-}
-
-*/

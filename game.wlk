@@ -130,18 +130,18 @@ object juego {
 	method opcionSeleccionada() {
 		return opciones.get(seleccion)
 	}
+
+    method jugadaRandomDeComputadora() {
+        jugadaComputadora = opciones.anyOne()
+    }
     
     
 	method jugar(jugadaJugador) {
-        
         if (!puedeJugar) {
             return
         }
-        
-        puedeJugar = false
-        jugadaComputadora = opciones.anyOne()
 
-        
+        puedeJugar = false
 
         if (jugadaJugador == jugadaComputadora) {
 

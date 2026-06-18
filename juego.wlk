@@ -102,7 +102,6 @@ object cartelResultado {
       return game.at(13, 6)
     }
     
-    
     // queda fuera de la pantalla hasta que se juegue
     return game.at(0, 20)
   }
@@ -168,13 +167,9 @@ object juego {
     // console.println("ENTRO A REINICIAR")
     
     jugadaComputadora = dude
-    
     mostrarResultado = false
-    
     resultado = ""
-    
     seleccion = 1 // vuelve a papel
-    
     puedeJugar = true
   }
 } 

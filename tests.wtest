@@ -100,8 +100,28 @@ describe "mostrar la jugada de la PC" {
 }
 
 
-describe " probar que se reinicia correctamente "{
+describe "reinicia correctamente "{
    
+  method initialize() {
+    // Simulamos una jugada
+    juego.jugadaComputadora(tijera)
+    juego.jugar(piedra)
+  }
+
+  test "después de jugar el estado es el esperado" {
+    assert.equals(tijera, juego.jugadaComputadora())
+    assert.that(juego.mostrarResultado())
+    assert.equals("ganaste", juego.resultado())
+    assert.notThat(juego.puedeJugar())
+  }
+
+  test "reiniciar vuelve al estado inicial" {
+    juego.reiniciar()
+    assert.equals(dude, juego.jugadaComputadora())
+    assert.notThat(juego.mostrarResultado())
+    assert.equals("", juego.resultado())
+    assert.that(juego.puedeJugar())
+  }
 }
 
 

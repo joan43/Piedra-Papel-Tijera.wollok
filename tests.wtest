@@ -113,8 +113,8 @@ describe "reinicia correctamente "{
   method initialize() {
     // Simulamos una jugada
     juego.jugadaComputadora(tijera)
-    juego.jugar(piedra
-    juego.resultado())
+    juego.jugar(piedra)
+    juego.resultado()
   }
 
   test "después de jugar el estado es el esperado" {

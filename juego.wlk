@@ -82,19 +82,7 @@ object cursor {
 
 object cartelResultado {
   method image() {
-    if (juego.resultado() == "ganaste") {
-      return "ganaste.png"
-    }
-    
-    if (juego.resultado() == "perdiste") {
-      return "perdiste.png"
-    }
-    
-    if (juego.resultado() == "empate") {
-      return "empate.png"
-    }
-    
-    return "ganaste.png"
+    return juego.resultado() + '.png'
   }
   
   method position() {

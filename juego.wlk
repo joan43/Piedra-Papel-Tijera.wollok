@@ -165,7 +165,7 @@ object juego {
   
   // reinicia el tablero
   method reiniciar() {
-    console.println("ENTRO A REINICIAR")
+    // console.println("ENTRO A REINICIAR")
     
     jugadaComputadora = dude
     
@@ -183,21 +183,6 @@ object juego {
 Muestra la jugada de la computadora
 */
 object jugadaPc {
-  method image() {
-    if (juego.jugadaComputadora() == piedra) {
-      return "piedra_pc.png"
-    }
-    
-    if (juego.jugadaComputadora() == papel) {
-      return "papel_pc.png"
-    }
-    
-    if (juego.jugadaComputadora() == tijera) {
-      return "tijera_pc.png"
-    }
-    
-    return "dude.png"
-  }
-  
+  method image() = juego.jugadaComputadora().image()
   method position() = game.at(14, 8)
 }

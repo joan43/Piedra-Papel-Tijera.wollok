@@ -1,5 +1,5 @@
-import game.*
-import mainExample.*
+import juego.*
+import wollok.game.*
 
  describe "todas las jugadas posibles"{
 
@@ -78,7 +78,26 @@ import mainExample.*
 
 }
 
+describe "mostrar la jugada de la PC" {
+  test "aparece en la posición indicada" {
+    assert.equals(game.at(14, 8), jugadaPc.position())
+  }
 
+  test "al principio es dude" {
+    assert.equals("dude.png", jugadaPc.image())
+  }
+
+  test "si se elije una opción la muestra" {
+    juego.jugadaComputadora(tijera)
+    assert.equals("tijera_preview.png", jugadaPc.image())
+  }
+
+  test "si reinicio el juego vuelve a dude" {
+    juego.jugadaComputadora(tijera)
+    juego.reiniciar()
+    assert.equals("dude.png", jugadaPc.image())
+  }
+}
 
 
 describe " probar que se reinicia correctamente "{

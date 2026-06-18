@@ -1,15 +1,5 @@
 import wollok.game.*
-import game.piedra
-import game.papel
-import game.tijera
-import game.humano
-import game.computadora
-import game.cursor
-import game.cartelResultado
-import game.juego
-import game.jugadaPc
-import game.btnreiniciar
-import game.aclaracion
+import juego.*
 
 program PiedraPapelTijera {
 	game.title("Piedra, Papel o Tijera")

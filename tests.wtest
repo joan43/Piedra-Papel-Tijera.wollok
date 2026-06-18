@@ -139,3 +139,9 @@ describe "El cartel resultado se muestra correctamente"{
       //assert.equals(game.at(13, 6), cartelResultado.position())
    }
 }
+
+describe "El cursor" {
+  test "se muestra abajo de la opción seleccionada" {
+    
+  }
+}

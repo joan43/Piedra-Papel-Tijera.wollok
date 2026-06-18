@@ -68,18 +68,11 @@ object cursor {
   method image() = "cursor_preview.png"
   
   method position() {
-    if (juego.seleccion() == 0) {
-      return game.at(11, 2)
-    }
-    
-    if (juego.seleccion() == 1) {
-      return game.at(14, 2)
-    }
-    
-    return game.at(17, 2)
+    return juego.opcionSeleccionada().position().down(1)
   }
-} // cartel que muestra el resultado
+} 
 
+// cartel que muestra el resultado
 object cartelResultado {
   method image() {
     return juego.resultado() + '.png'

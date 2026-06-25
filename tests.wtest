@@ -135,13 +135,30 @@ describe "reinicia correctamente "{
 
 
 describe "El cartel resultado se muestra correctamente"{
-   test "- "{
-      //assert.equals(game.at(13, 6), cartelResultado.position())
+   test "si se puede jugar no se muestra" {
+       juego.puedeJugar(true) 
+       assert.equals(game.at(0, 20), cartelResultado.position())
+   }
+
+   test "si no se puede jugar se muestra" {
+        juego.puedeJugar(false) 
+        assert.equals(game.at(13, 6), cartelResultado.position())
    }
 }
 
-describe "El cursor" {
-  test "se muestra abajo de la opción seleccionada" {
-    
+describe "El cursor funciona correctamente" {
+
+  test "empieza en papel" {
+    assert.equals(1, cursor.position())
+  }
+
+  test "se mueve a la izquierda" {
+    juego.moverIzquierda()
+    assert.equals(0, cursor.position())
+  }
+
+  test "se mueve a la derecha" {
+    juego.moverDerecha()
+    assert.equals(2, cursor.position())
   }
 }

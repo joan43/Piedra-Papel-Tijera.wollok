@@ -96,15 +96,17 @@ object juego {
   var property mostrarResultado = false
   var property jugadaComputadora = dude
   var property puedeJugar = true
+  var property animando = false
+  var property contadorAnimacion = 0 
   
   method moverIzquierda() {
-    if (puedeJugar && (seleccion > 0)) {
+    if (puedeJugar && !animando && (seleccion > 0)) {
       seleccion -= 1
     }
   }
   
   method moverDerecha() {
-    if (puedeJugar && (seleccion < 2)) {
+    if (puedeJugar && !animando && (seleccion < 2)) {
       seleccion += 1
     }
   }

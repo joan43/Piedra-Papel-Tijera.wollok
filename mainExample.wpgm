@@ -29,18 +29,45 @@ program PiedraPapelTijera {
 
 	// capturamos ENTER para jugar
 	keyboard.enter().onPressDo {
-        if (juego.puedeJugar()) {
-			juego.jugadaRandomDeComputadora()
-        	juego.jugar(juego.opcionSeleccionada())
+       if (juego.puedeJugar() && !juego.animando()) {
+            juego.animando(true)
+            juego.contadorAnimacion(0)
         }
     }
 
     // presionar R para reiniciar
 	keyboard.r().onPressDo {
-        if (!juego.puedeJugar()) {
-            juego.reiniciar()
+        if (!juego.animando() && !juego.puedeJugar()) {
+         juego.reiniciar()
         }
     }
 
+    const animacion = game.tick(100, {
+
+    if (juego.animando()) {
+
+        juego.jugadaComputadora(
+            [piedra, papel, tijera].anyOne()
+        )
+
+        juego.contadorAnimacion(
+            juego.contadorAnimacion() + 1
+        )
+
+        if (juego.contadorAnimacion() >= 35) {
+
+            juego.animando(false)
+
+            juego.jugadaRandomDeComputadora()
+
+            juego.jugar(
+                juego.opcionSeleccionada()
+            )
+        }
+        }
+
+    }, false)
+
+    animacion.start()
 	game.start()
 }

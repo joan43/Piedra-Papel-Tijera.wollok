@@ -29,16 +29,15 @@ program PiedraPapelTijera {
 
 	// capturamos ENTER para jugar
 	keyboard.enter().onPressDo {
-        if (juego.puedeJugar()) {
-			juego.jugadaRandomDeComputadora()
-        	juego.jugar(juego.opcionSeleccionada())
+       if (juego.puedeSeleccionar()) {
+			computadora.jugar()
         }
     }
 
     // presionar R para reiniciar
 	keyboard.r().onPressDo {
-        if (!juego.puedeJugar()) {
-            juego.reiniciar()
+        if (juego.estaTerminado()) {
+    		juego.reiniciar()
         }
     }
 

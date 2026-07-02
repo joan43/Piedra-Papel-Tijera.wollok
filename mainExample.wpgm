@@ -29,7 +29,7 @@ program PiedraPapelTijera {
 
 	// capturamos ENTER para jugar
 	keyboard.enter().onPressDo {
-       if (juego.puedeJugar() && !juego.animando()) {
+       if (juego.puedeSeleccionar()) {
             juego.animando(true)
             juego.contadorAnimacion(0)
         }
@@ -37,8 +37,8 @@ program PiedraPapelTijera {
 
     // presionar R para reiniciar
 	keyboard.r().onPressDo {
-        if (!juego.animando() && !juego.puedeJugar()) {
-         juego.reiniciar()
+        if (juego.estaTerminado()) {
+    		juego.reiniciar()
         }
     }
 

@@ -100,16 +100,19 @@ object juego {
   var property contadorAnimacion = 0 
   
   method moverIzquierda() {
-    if (puedeJugar && !animando && (seleccion > 0)) {
+    if (self.puedeSeleccionar() && seleccion > 0) {
       seleccion -= 1
     }
   }
   
   method moverDerecha() {
-    if (puedeJugar && !animando && (seleccion < 2)) {
+    if (self.puedeSeleccionar() && seleccion < 2) {
       seleccion += 1
     }
   }
+
+  method puedeSeleccionar() = puedeJugar && !animando
+  method estaTerminado() = !puedeJugar && !animando
   
   method opcionSeleccionada() = opciones.get(seleccion)
   

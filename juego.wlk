@@ -55,7 +55,34 @@ object humano {
 object computadora {
   method image() = "compu_preview.png"
   
-  method position() = game.at(14, 10) // cre
+  method position() = game.at(14, 10)
+
+  method jugar() {
+    // Hace la animación de selección y al final juega
+    
+    juego.animando(true)
+    var contadorAnimacion = 0
+
+    const animacion = game.tick(100, {
+      juego.jugadaComputadora(
+          [piedra, papel, tijera].anyOne()
+      )
+      
+      contadorAnimacion += 1
+
+      if (contadorAnimacion >= 35) {
+          juego.animando(false)
+          animacion.stop()
+
+          juego.jugadaRandomDeComputadora()
+          juego.jugar(
+              juego.opcionSeleccionada()
+          )
+      }
+    }, false)
+    
+    animacion.start()
+  }
 }
 
 object btnreiniciar {
@@ -97,7 +124,6 @@ object juego {
   var property jugadaComputadora = dude
   var property puedeJugar = true
   var property animando = false
-  var property contadorAnimacion = 0 
   
   method moverIzquierda() {
     if (self.puedeSeleccionar() && seleccion > 0) {

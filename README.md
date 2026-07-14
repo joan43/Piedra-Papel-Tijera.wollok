@@ -55,6 +55,10 @@ Piedra-Papel-Tijera/
 |── tests.wtest
 |
 ├── README.md
+|
+├── .github/
+        |-> workflows/
+                   |->  ci.yml
 ```
 
 ---
@@ -63,7 +67,7 @@ Piedra-Papel-Tijera/
 
 * mejor interfaz y animaciones
 * niveles de dificultad
-* 
+
 
 °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 
@@ -74,7 +78,3 @@ Proyecto desarrollado en grupo: elias salazar y joan molina
 docente: nahuel palumbo
 
 las practicas profesionalizantes [investigacion] de 7° programacion - ESET-UNQ
-
-
-
-

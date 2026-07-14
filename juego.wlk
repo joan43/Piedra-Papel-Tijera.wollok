@@ -153,10 +153,13 @@ object juego {
     
     if (jugadaJugador == jugadaComputadora) {
       resultado = "empate"
+      game.sound("empate.mp3").play()
     } else if (jugadaJugador.leGanaA(jugadaComputadora)) {
       resultado = "ganaste"
+      game.sound("ganar.mp3").play()
     } else {
       resultado = "perdiste"
+      game.sound("perder.mp3").play()
     }
 
     puedeJugar = false

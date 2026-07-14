@@ -29,10 +29,11 @@ program PiedraPapelTijera {
 
 	// capturamos ENTER para jugar
 	keyboard.enter().onPressDo {
-       if (juego.puedeSeleccionar()) {
-			computadora.jugar()
-        }
+    if (juego.puedeSeleccionar()) {
+        game.sound("seleccion.mp3").play()
+        computadora.jugar()
     }
+}
 
     // presionar R para reiniciar
 	keyboard.r().onPressDo {
